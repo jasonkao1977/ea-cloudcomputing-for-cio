@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<archimate_view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Capability_Map" id="id-5e39d84835154db299cb34978e2d6df9"><element xsi:type="archimate:ArchimateDiagramModel" name="Capability Map" id="id-5e39d84835154db299cb34978e2d6df9">
+      <child xsi:type="archimate:DiagramObject" id="id-7d534f085b31436fb1bf00df0c3170ba" archimateElement="id-d2ffb49f21">
+        <bounds x="636" y="456" width="120" height="55" />
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-78dbdfa013ea4ff69ec4da43134708af" archimateElement="id-f956c71db8">
+        <bounds x="786" y="456" width="120" height="55" />
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d91bb5b3823b4b8d84558120fa2244c4" archimateElement="id-3441dcf000">
+        <bounds x="936" y="456" width="120" height="55" />
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-734e26e497e14608ad2350ce674c99ff" archimateElement="id-a52800b000">
+        <bounds x="636" y="556" width="120" height="55" />
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5c6eeb2b465449d5b1678cdc6292a5d7" archimateElement="id-79c0acd561">
+        <bounds x="786" y="556" width="120" height="55" />
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-94236b62a1794793801adb2d03700d61" archimateElement="id-f0cd2c5938">
+        <bounds x="936" y="556" width="120" height="55" />
+      </child>
+    </element>
+    </archimate_view>
