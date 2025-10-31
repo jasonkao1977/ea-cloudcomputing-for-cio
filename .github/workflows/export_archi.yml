@@ -1,0 +1,91 @@
+name: Export Archi Diagrams
+
+# 本工作流程示範如何在 GitHub Actions 中自動匯出 Archi 視圖為圖片檔，並推送回倉庫。請根據您使用的 Archi CLI/插件版本調整下載 URL 與命令參數。
+
+on:
+  # 允許手動執行 workflow_dispatch，或在雲端模型檔變更時自動觸發
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - Model_Files/cloudcomputing.archimate
+
+jobs:
+  export-archi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # 安裝 Java 環境以執行 Archi CLI
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # 下載 Archi 命令列工具。本範例假設使用官方提供的 headless 版或 CLI 版，您可修改 ARCHI_URL 指向適當版本。
+      - name: Download Archi CLI
+        run: |
+          ARCHI_URL="https://www.archimatetool.com/downloads/archi-commandline-latest.zip"
+          wget "$ARCHI_URL" -O archi-cli.zip
+          mkdir archi-cli
+          unzip -q archi-cli.zip -d archi-cli
+          # 解壓縮後的路徑與 JAR 名稱視版本而定，請根據實際情況調整
+
+      # （可選）安裝 jArchi script 插件，以便使用腳本批次匯出視圖。若您不需要腳本，可刪除此步驟。
+      - name: Install jArchi plugin
+        run: |
+          # 以下版本號僅為示範，如需最新版本請自行更新 URL
+          JARCHI_VERSION="1.6.0"
+          wget "https://github.com/archimatetool/jarchi/releases/download/v${JARCHI_VERSION}/org.archicontribs.jarchi_${JARCHI_VERSION}.jar" \
+            -O archi-cli/plugins/org.archicontribs.jarchi_${JARCHI_VERSION}.jar
+
+      # 匯出所有視圖為圖片。此示例假設使用 jArchi 執行腳本，根據模型中的視圖名稱產生檔名，並輸出至 docs/img。
+      - name: Export diagrams
+        run: |
+          mkdir -p docs/img
+          # 建立 jArchi 腳本，用於匯出所有視圖
+          cat <<'SCRIPT' > export_views.js
+          /*
+            jArchi 腳本：
+            - 載入模型檔案
+            - 遍歷所有視圖
+            - 將每個視圖匯出為 PNG，檔名為視圖名稱轉換後的字母加底線格式
+          */
+          const file = new java.io.File('Model_Files/cloudcomputing.archimate');
+          let model = $(Archi).loadModel(file);
+          if (!model) {
+            console.log('未能載入模型');
+            quit();
+          }
+          let outputDir = new java.io.File('docs/img');
+          outputDir.mkdirs();
+          model.diagrams.forEach(function(diagram) {
+            // 將視圖名稱轉為檔名（移除特殊字元）
+            let name = diagram.name.replace(/\s+/g, '_').replace(/&/g, '').replace(/[^a-zA-Z0-9_]/g, '') + '.png';
+            let exportFile = new java.io.File(outputDir, name);
+            console.log('Exporting ' + diagram.name + ' to ' + exportFile);
+            diagram.export(exportFile);
+          });
+          SCRIPT
+          # 使用 xvfb-run 執行 headless Archi 應用程式以避免圖形介面需求
+          # 您需要確認解壓後的 Archi 可執行檔路徑及應用程序 ID，以下為常見範例：
+          xvfb-run -a archi-cli/Archi -nosplash -application com.archimatetool.scriptapp \
+            -consoleLog -data ./workspace -script export_views.js
+
+      # 提交與推送新的圖檔
+      - name: Commit and push diagrams
+        env:
+          GIT_AUTHOR_NAME: GitHub Actions
+          GIT_AUTHOR_EMAIL: actions@github.com
+          GIT_COMMITTER_NAME: GitHub Actions
+          GIT_COMMITTER_EMAIL: actions@github.com
+        run: |
+          git add docs/img || true
+          if git diff --cached --quiet; then
+            echo 'No diagrams changed.'
+          else
+            git commit -m 'Auto-export Archi diagrams via GitHub Actions'
+            git push
+          fi
