@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>CloudComputing</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.4.1.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>CloudComputing</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+                    <!-- Analysis -->
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="analysis">
+						<table class="table table-striped table-hover table-condensed" id="used-in-views">
+							<thead>
+								<tr><th colspan="2" class="i18n-used-in-views" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-viewpoint"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="table table-striped table-hover table-condensed" id="model-relations">
+							<thead>
+								<tr><th colspan="4" class="i18n-model-relations" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-type"></th>
+									<th class="i18n-source"></th>
+									<th class="i18n-target"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-990d60df63ed4e7ca723ff13e9898285", type:"ArchimateModel", name:decodeURL("CloudComputing"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-22145eb4f30840899fadf4c7a2665fe1", contenttype:"Folder"});
+								dataFolders.push({id:"id-22145eb4f30840899fadf4c7a2665fe1", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-f0cd2c5938", contenttype:"Capability"});
+										dataElements.push({id:"id-f0cd2c5938", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-%E9%9B%B2%E6%B2%BB%E7%90%86"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-f0cd2c5938", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-f0cd2c5938", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-f0cd2c5938", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-f0cd2c5938", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-f0cd2c5938", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-a52800b000", contenttype:"Capability"});
+										dataElements.push({id:"id-a52800b000", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-%E5%B9%B3%E5%8F%B0%E5%B7%A5%E7%A8%8B"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-a52800b000", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-a52800b000", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-a52800b000", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-a52800b000", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-a52800b000", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-f956c71db8", contenttype:"Capability"});
+										dataElements.push({id:"id-f956c71db8", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-FinOps"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-f956c71db8", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-f956c71db8", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-f956c71db8", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-f956c71db8", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-f956c71db8", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-d2ffb49f21", contenttype:"Capability"});
+										dataElements.push({id:"id-d2ffb49f21", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-DevSecOps"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-d2ffb49f21", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-d2ffb49f21", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-d2ffb49f21", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-d2ffb49f21", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d2ffb49f21", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-79c0acd561", contenttype:"Capability"});
+										dataElements.push({id:"id-79c0acd561", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-%E8%B3%87%E6%96%99%E5%B9%B3%E5%8F%B0"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-79c0acd561", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-79c0acd561", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-79c0acd561", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-79c0acd561", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-79c0acd561", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-3441dcf000", contenttype:"Capability"});
+										dataElements.push({id:"id-3441dcf000", type:"Capability", specialization:decodeURL(""), name:decodeURL("STR-Capability-MLOps"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-3441dcf000", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-3441dcf000", propkey:decodeURL("Domain"), propvalue:decodeURL("Platform")});
+													dataProperties.push({conceptid:"id-3441dcf000", propkey:decodeURL("Maturity"), propvalue:decodeURL("3")});
+													dataProperties.push({conceptid:"id-3441dcf000", propkey:decodeURL("KPI"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-3441dcf000", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-75d5c98660", contenttype:"CourseOfAction"});
+										dataElements.push({id:"id-75d5c98660", type:"CourseOfAction", specialization:decodeURL(""), name:decodeURL("STR-CoA-%E6%A2%AF%E6%AC%A1%E9%81%B7%E7%A7%BB"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-3613b9cbda", contenttype:"CourseOfAction"});
+										dataElements.push({id:"id-3613b9cbda", type:"CourseOfAction", specialization:decodeURL(""), name:decodeURL("STR-CoA-%E9%87%8D%E6%A7%8B%E7%AD%96%E7%95%A5"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-0f7ddf2bec", contenttype:"CourseOfAction"});
+										dataElements.push({id:"id-0f7ddf2bec", type:"CourseOfAction", specialization:decodeURL(""), name:decodeURL("STR-CoA-%E5%85%B1%E7%94%A8%E5%B9%B3%E5%8F%B0%E5%BB%BA%E7%BD%AE"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-9e6892ddd7", contenttype:"Resource"});
+										dataElements.push({id:"id-9e6892ddd7", type:"Resource", specialization:decodeURL(""), name:decodeURL("STR-Resource-%E9%A0%90%E7%AE%97%E6%B1%A0"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-881a414443", contenttype:"Resource"});
+										dataElements.push({id:"id-881a414443", type:"Resource", specialization:decodeURL(""), name:decodeURL("STR-Resource-%E4%BA%BA%E5%8A%9B%E7%B7%A8%E5%88%B6"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-5a0fca35e2", contenttype:"Resource"});
+										dataElements.push({id:"id-5a0fca35e2", type:"Resource", specialization:decodeURL(""), name:decodeURL("STR-Resource-%E9%97%9C%E9%8D%B5%E6%8A%80%E8%83%BD%E6%B1%A0"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-44f5beeb27", contenttype:"ValueStream"});
+										dataElements.push({id:"id-44f5beeb27", type:"ValueStream", specialization:decodeURL(""), name:decodeURL("STR-ValueStream-IdeaToLive"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-22145eb4f30840899fadf4c7a2665fe1", contentid:"id-582ed483f4", contenttype:"ValueStream"});
+										dataElements.push({id:"id-582ed483f4", type:"ValueStream", specialization:decodeURL(""), name:decodeURL("STR-ValueStream-IncidentToRecover"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-500fc75b41d144ef8df6dad003cf80e5", contenttype:"Folder"});
+								dataFolders.push({id:"id-500fc75b41d144ef8df6dad003cf80e5", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-66a527c2be", contenttype:"BusinessActor"});
+										dataElements.push({id:"id-66a527c2be", type:"BusinessActor", specialization:decodeURL(""), name:decodeURL("BUS-Actor-%E4%BA%8B%E6%A5%AD%E5%96%AE%E4%BD%8D"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-5af3683b19", contenttype:"BusinessActor"});
+										dataElements.push({id:"id-5af3683b19", type:"BusinessActor", specialization:decodeURL(""), name:decodeURL("BUS-Actor-%E5%B9%B3%E5%8F%B0%E5%B7%A5%E7%A8%8B%E9%83%A8"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-4ad6cfab62", contenttype:"BusinessActor"});
+										dataElements.push({id:"id-4ad6cfab62", type:"BusinessActor", specialization:decodeURL(""), name:decodeURL("BUS-Actor-%E9%9B%B2%E5%8D%93%E8%B6%8A%E4%B8%AD%E5%BF%83"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-300c4e32f9", contenttype:"BusinessRole"});
+										dataElements.push({id:"id-300c4e32f9", type:"BusinessRole", specialization:decodeURL(""), name:decodeURL("BUS-Role-%E7%94%A2%E5%93%81%E8%B2%A0%E8%B2%AC%E4%BA%BA"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-01891f7868", contenttype:"BusinessRole"});
+										dataElements.push({id:"id-01891f7868", type:"BusinessRole", specialization:decodeURL(""), name:decodeURL("BUS-Role-%E5%B9%B3%E5%8F%B0%E6%93%81%E6%9C%89%E8%80%85"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-115e9e2e52", contenttype:"BusinessRole"});
+										dataElements.push({id:"id-115e9e2e52", type:"BusinessRole", specialization:decodeURL(""), name:decodeURL("BUS-Role-%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7%E5%AE%98"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-f5d1751823", contenttype:"BusinessRole"});
+										dataElements.push({id:"id-f5d1751823", type:"BusinessRole", specialization:decodeURL(""), name:decodeURL("BUS-Role-FinOps%E5%88%86%E6%9E%90%E5%B8%AB"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-cb64f3b2dc", contenttype:"BusinessFunction"});
+										dataElements.push({id:"id-cb64f3b2dc", type:"BusinessFunction", specialization:decodeURL(""), name:decodeURL("BUS-Function-%E6%9E%B6%E6%A7%8B%E6%B2%BB%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-820a9cb84c", contenttype:"BusinessFunction"});
+										dataElements.push({id:"id-820a9cb84c", type:"BusinessFunction", specialization:decodeURL(""), name:decodeURL("BUS-Function-%E8%B3%87%E5%AE%89%E6%B2%BB%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-c89c8b1f7b", contenttype:"BusinessFunction"});
+										dataElements.push({id:"id-c89c8b1f7b", type:"BusinessFunction", specialization:decodeURL(""), name:decodeURL("BUS-Function-%E5%90%88%E8%A6%8F%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-671445d98f", contenttype:"BusinessFunction"});
+										dataElements.push({id:"id-671445d98f", type:"BusinessFunction", specialization:decodeURL(""), name:decodeURL("BUS-Function-%E4%BE%9B%E6%87%89%E5%95%86%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-f85e52b820", contenttype:"BusinessProcess"});
+										dataElements.push({id:"id-f85e52b820", type:"BusinessProcess", specialization:decodeURL(""), name:decodeURL("BUS-Process-%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-c7874709b1", contenttype:"BusinessProcess"});
+										dataElements.push({id:"id-c7874709b1", type:"BusinessProcess", specialization:decodeURL(""), name:decodeURL("BUS-Process-%E8%AE%8A%E6%9B%B4%E8%88%87%E7%99%BC%E5%B8%83%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-3bb454dfe7", contenttype:"BusinessProcess"});
+										dataElements.push({id:"id-3bb454dfe7", type:"BusinessProcess", specialization:decodeURL(""), name:decodeURL("BUS-Process-%E4%BA%8B%E4%BB%B6%E8%88%87%E5%95%8F%E9%A1%8C%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-efa297c18b", contenttype:"BusinessService"});
+										dataElements.push({id:"id-efa297c18b", type:"BusinessService", specialization:decodeURL(""), name:decodeURL("BUS-Service-%E4%BC%81%E6%A5%AD%E9%9B%B2%E6%9C%8D%E5%8B%99%E7%9B%AE%E9%8C%84"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-efa297c18b", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-0bb4c4d067", contenttype:"BusinessService"});
+										dataElements.push({id:"id-0bb4c4d067", type:"BusinessService", specialization:decodeURL(""), name:decodeURL("BUS-Service-%E8%B3%87%E6%96%99%E5%B9%B3%E5%8F%B0%E5%8D%B3%E6%9C%8D%E5%8B%99"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0bb4c4d067", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-0e0768e723", contenttype:"Contract"});
+										dataElements.push({id:"id-0e0768e723", type:"Contract", specialization:decodeURL(""), name:decodeURL("SEC-Contract-%E9%9B%B2%E4%BE%9B%E6%87%89%E5%95%86%E5%90%88%E7%B4%84"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-0e0768e723", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0e0768e723", propkey:decodeURL("CostCenter"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-0e0768e723", propkey:decodeURL("BillingModel"), propvalue:decodeURL("OnDemand")});
+													dataProperties.push({conceptid:"id-0e0768e723", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-0e0768e723", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-987068de70", contenttype:"Contract"});
+										dataElements.push({id:"id-987068de70", type:"Contract", specialization:decodeURL(""), name:decodeURL("SEC-Contract-SLA"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-987068de70", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-987068de70", propkey:decodeURL("CostCenter"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-987068de70", propkey:decodeURL("BillingModel"), propvalue:decodeURL("OnDemand")});
+													dataProperties.push({conceptid:"id-987068de70", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-987068de70", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-506273cc87", contenttype:"Contract"});
+										dataElements.push({id:"id-506273cc87", type:"Contract", specialization:decodeURL(""), name:decodeURL("SEC-Contract-DPA%EF%BC%88%E8%B3%87%E6%96%99%E8%99%95%E7%90%86%E9%99%84%E7%B4%84%EF%BC%89"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-506273cc87", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-506273cc87", propkey:decodeURL("CostCenter"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-506273cc87", propkey:decodeURL("BillingModel"), propvalue:decodeURL("OnDemand")});
+													dataProperties.push({conceptid:"id-506273cc87", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-506273cc87", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-e986f50d78", contenttype:"Product"});
+										dataElements.push({id:"id-e986f50d78", type:"Product", specialization:decodeURL(""), name:decodeURL("SEC-Product-%E8%BA%AB%E5%88%86%E5%8D%B3%E6%9C%8D%E5%8B%99"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-500fc75b41d144ef8df6dad003cf80e5", contentid:"id-a5de024ee9", contenttype:"BusinessProcess"});
+										dataElements.push({id:"id-a5de024ee9", type:"BusinessProcess", specialization:decodeURL(""), name:decodeURL("RUN-Process-%E4%BA%8B%E4%BB%B6%E8%88%87%E5%95%8F%E9%A1%8C%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-058e1387995c48bdba8e65074605368e", contenttype:"Folder"});
+								dataFolders.push({id:"id-058e1387995c48bdba8e65074605368e", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-b31924d802", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-b31924d802", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("APP-Component-IAM"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-853389cff3", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-853389cff3", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("APP-Component-APIGateway"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-9489de5c0c", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-9489de5c0c", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("APP-Component-CICD"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-4178fd4c75", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-4178fd4c75", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("APP-Component-%E8%B3%87%E6%96%99%E8%99%95%E7%90%86"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-0f4150a4ee", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-0f4150a4ee", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("APP-Component-%E5%A0%B1%E8%A1%A8%E5%88%86%E6%9E%90"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-d0b7f6f510", contenttype:"ApplicationService"});
+										dataElements.push({id:"id-d0b7f6f510", type:"ApplicationService", specialization:decodeURL(""), name:decodeURL("APP-Service-%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0b7f6f510", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-68d40f7f8c", contenttype:"ApplicationService"});
+										dataElements.push({id:"id-68d40f7f8c", type:"ApplicationService", specialization:decodeURL(""), name:decodeURL("APP-Service-%E9%87%91%E9%91%B0%E7%AE%A1%E7%90%86"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-68d40f7f8c", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-45c59dfb1f", contenttype:"ApplicationService"});
+										dataElements.push({id:"id-45c59dfb1f", type:"ApplicationService", specialization:decodeURL(""), name:decodeURL("APP-Service-%E4%BA%8B%E4%BB%B6%E5%8C%AF%E6%B5%81"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45c59dfb1f", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-104da5b1a8", contenttype:"ApplicationService"});
+										dataElements.push({id:"id-104da5b1a8", type:"ApplicationService", specialization:decodeURL(""), name:decodeURL("APP-Service-%E8%B3%87%E6%96%99%E6%9F%A5%E8%A9%A2"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-104da5b1a8", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-a9bd5e9997", contenttype:"ApplicationInterface"});
+										dataElements.push({id:"id-a9bd5e9997", type:"ApplicationInterface", specialization:decodeURL(""), name:decodeURL("APP-Interface-API"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-7b15ee4447", contenttype:"ApplicationInterface"});
+										dataElements.push({id:"id-7b15ee4447", type:"ApplicationInterface", specialization:decodeURL(""), name:decodeURL("APP-Interface-%E4%BA%8B%E4%BB%B6%E5%8C%AF%E6%B5%81%E4%BB%8B%E9%9D%A2"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-e10e76db8c", contenttype:"ApplicationProcess"});
+										dataElements.push({id:"id-e10e76db8c", type:"ApplicationProcess", specialization:decodeURL(""), name:decodeURL("APP-Process-%E9%83%A8%E7%BD%B2%E6%B5%81%E6%B0%B4%E7%B7%9A"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-4dd9b20370", contenttype:"ApplicationProcess"});
+										dataElements.push({id:"id-4dd9b20370", type:"ApplicationProcess", specialization:decodeURL(""), name:decodeURL("APP-Process-%E8%B3%87%E6%96%99%E6%B5%81%E6%B0%B4%E7%B7%9A"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-4d7520f4cc", contenttype:"DataObject"});
+										dataElements.push({id:"id-4d7520f4cc", type:"DataObject", specialization:decodeURL(""), name:decodeURL("APP-Data-%E5%AE%A2%E6%88%B6%E8%B3%87%E6%96%99"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-4d7520f4cc", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-4d7520f4cc", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-4d7520f4cc", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-ef01fb8547", contenttype:"DataObject"});
+										dataElements.push({id:"id-ef01fb8547", type:"DataObject", specialization:decodeURL(""), name:decodeURL("APP-Data-%E4%BA%A4%E6%98%93%E8%B3%87%E6%96%99"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-ef01fb8547", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-ef01fb8547", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-ef01fb8547", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-940749e9c8", contenttype:"DataObject"});
+										dataElements.push({id:"id-940749e9c8", type:"DataObject", specialization:decodeURL(""), name:decodeURL("APP-Data-%E9%81%99%E6%B8%AC%E8%88%87%E6%97%A5%E8%AA%8C"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-940749e9c8", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-940749e9c8", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-940749e9c8", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-3ac34eccc4", contenttype:"DataObject"});
+										dataElements.push({id:"id-3ac34eccc4", type:"DataObject", specialization:decodeURL(""), name:decodeURL("APP-Data-ML%E6%A8%A1%E5%9E%8B%E8%88%87%E6%AC%8A%E9%87%8D"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-3ac34eccc4", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-3ac34eccc4", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-3ac34eccc4", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-78abf1214a", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"id-78abf1214a", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("RUN-Component-%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7%E5%B9%B3%E5%8F%B0"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-b0a3a06d6f", contenttype:"DataObject"});
+										dataElements.push({id:"id-b0a3a06d6f", type:"DataObject", specialization:decodeURL(""), name:decodeURL("RUN-Data-SLO%E8%88%87SLI"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-b0a3a06d6f", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-b0a3a06d6f", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b0a3a06d6f", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-058e1387995c48bdba8e65074605368e", contentid:"id-e90ab859c5", contenttype:"DataObject"});
+										dataElements.push({id:"id-e90ab859c5", type:"DataObject", specialization:decodeURL(""), name:decodeURL("RUN-Data-%E4%BA%8B%E4%BB%B6%E8%88%87%E5%95%8F%E9%A1%8C%E7%A5%A8%E6%93%9A"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-e90ab859c5", propkey:decodeURL("DataClass"), propvalue:decodeURL("Internal")});
+													dataProperties.push({conceptid:"id-e90ab859c5", propkey:decodeURL("Compliance"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-e90ab859c5", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-08a919ad0bb54a408126b988e6b7b572", contenttype:"Folder"});
+								dataFolders.push({id:"id-08a919ad0bb54a408126b988e6b7b572", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-4cd40a5131", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-4cd40a5131", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E9%81%8B%E7%AE%97"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-4cd40a5131", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-9408465d4b", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-9408465d4b", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E5%84%B2%E5%AD%98"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-9408465d4b", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-45a5274f33", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-45a5274f33", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E8%B3%87%E6%96%99%E5%BA%AB"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45a5274f33", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-a5f02d8984", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-a5f02d8984", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E5%AE%B9%E5%99%A8%E8%88%87Kubernetes"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-a5f02d8984", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-649d55d75e", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-649d55d75e", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E5%BF%AB%E5%8F%96"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-649d55d75e", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-cc9b47a18f", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-cc9b47a18f", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("TECH-Service-%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-cc9b47a18f", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-45e1279525", contenttype:"Node"});
+										dataElements.push({id:"id-45e1279525", type:"Node", specialization:decodeURL(""), name:decodeURL("TECH-Node-AWSAccount"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-45e1279525", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45e1279525", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-45e1279525", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-45e1279525", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-10b4aaedb5", contenttype:"Node"});
+										dataElements.push({id:"id-10b4aaedb5", type:"Node", specialization:decodeURL(""), name:decodeURL("TECH-Node-AzureSubscription"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-10b4aaedb5", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-10b4aaedb5", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-10b4aaedb5", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-10b4aaedb5", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-975c1df85a", contenttype:"Node"});
+										dataElements.push({id:"id-975c1df85a", type:"Node", specialization:decodeURL(""), name:decodeURL("TECH-Node-GCPProject"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-975c1df85a", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-975c1df85a", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-975c1df85a", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-975c1df85a", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-c8be790774", contenttype:"Node"});
+										dataElements.push({id:"id-c8be790774", type:"Node", specialization:decodeURL(""), name:decodeURL("TECH-Node-OnPremCluster"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-c8be790774", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-c8be790774", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-c8be790774", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-c8be790774", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-94e2f45cb9", contenttype:"SystemSoftware"});
+										dataElements.push({id:"id-94e2f45cb9", type:"SystemSoftware", specialization:decodeURL(""), name:decodeURL("TECH-SystemSoftware-Kubernetes"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-685a18cadd", contenttype:"SystemSoftware"});
+										dataElements.push({id:"id-685a18cadd", type:"SystemSoftware", specialization:decodeURL(""), name:decodeURL("TECH-SystemSoftware-ServiceMesh"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-deffb2bd88", contenttype:"SystemSoftware"});
+										dataElements.push({id:"id-deffb2bd88", type:"SystemSoftware", specialization:decodeURL(""), name:decodeURL("TECH-SystemSoftware-Linux"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-764bc5f064", contenttype:"SystemSoftware"});
+										dataElements.push({id:"id-764bc5f064", type:"SystemSoftware", specialization:decodeURL(""), name:decodeURL("TECH-SystemSoftware-Hypervisor"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-d979aacd73", contenttype:"TechnologyInterface"});
+										dataElements.push({id:"id-d979aacd73", type:"TechnologyInterface", specialization:decodeURL(""), name:decodeURL("TECH-Interface-Ingress"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-60461b2150", contenttype:"TechnologyInterface"});
+										dataElements.push({id:"id-60461b2150", type:"TechnologyInterface", specialization:decodeURL(""), name:decodeURL("TECH-Interface-ServiceEndpoint"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-41caa4614c", contenttype:"Device"});
+										dataElements.push({id:"id-41caa4614c", type:"Device", specialization:decodeURL(""), name:decodeURL("TECH-Device-EdgeGateway"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-c94fb64d3f", contenttype:"Device"});
+										dataElements.push({id:"id-c94fb64d3f", type:"Device", specialization:decodeURL(""), name:decodeURL("TECH-Device-HSM"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-883372926e", contenttype:"CommunicationNetwork"});
+										dataElements.push({id:"id-883372926e", type:"CommunicationNetwork", specialization:decodeURL(""), name:decodeURL("TECH-Network-SDWAN"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-224d48ef3d", contenttype:"CommunicationNetwork"});
+										dataElements.push({id:"id-224d48ef3d", type:"CommunicationNetwork", specialization:decodeURL(""), name:decodeURL("TECH-Network-VPC"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-7897f1e4f0", contenttype:"CommunicationNetwork"});
+										dataElements.push({id:"id-7897f1e4f0", type:"CommunicationNetwork", specialization:decodeURL(""), name:decodeURL("TECH-Network-TransitGateway"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-85e7bf939f", contenttype:"Path"});
+										dataElements.push({id:"id-85e7bf939f", type:"Path", specialization:decodeURL(""), name:decodeURL("TECH-Path-VPN"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-cf3e9195ef", contenttype:"Path"});
+										dataElements.push({id:"id-cf3e9195ef", type:"Path", specialization:decodeURL(""), name:decodeURL("TECH-Path-DirectConnect"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-2f6831dcd2", contenttype:"Path"});
+										dataElements.push({id:"id-2f6831dcd2", type:"Path", specialization:decodeURL(""), name:decodeURL("TECH-Path-ExpressRoute"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-48e32a106e", contenttype:"Path"});
+										dataElements.push({id:"id-48e32a106e", type:"Path", specialization:decodeURL(""), name:decodeURL("TECH-Path-Interconnect"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-df6c119e1f", contenttype:"Artifact"});
+										dataElements.push({id:"id-df6c119e1f", type:"Artifact", specialization:decodeURL(""), name:decodeURL("TECH-Artifact-TerraformModule"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-e9fd07594a", contenttype:"Artifact"});
+										dataElements.push({id:"id-e9fd07594a", type:"Artifact", specialization:decodeURL(""), name:decodeURL("TECH-Artifact-HelmChart"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-567bc88df0", contenttype:"Artifact"});
+										dataElements.push({id:"id-567bc88df0", type:"Artifact", specialization:decodeURL(""), name:decodeURL("TECH-Artifact-PolicyAsCode"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-ad79fd59bb", contenttype:"Facility"});
+										dataElements.push({id:"id-ad79fd59bb", type:"Facility", specialization:decodeURL(""), name:decodeURL("TECH-Facility-%E8%B3%87%E6%96%99%E4%B8%AD%E5%BF%83%EF%BC%88%E6%B7%B7%E5%90%88%E9%9B%B2%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-b2ae05c60d", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-b2ae05c60d", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("RUN-Service-APM"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b2ae05c60d", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-1ce5a016bb", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-1ce5a016bb", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("RUN-Service-Logs"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-1ce5a016bb", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-d765d857ee", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-d765d857ee", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("RUN-Service-Metrics"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d765d857ee", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-08a919ad0bb54a408126b988e6b7b572", contentid:"id-6b8cbd42ae", contenttype:"TechnologyService"});
+										dataElements.push({id:"id-6b8cbd42ae", type:"TechnologyService", specialization:decodeURL(""), name:decodeURL("RUN-Service-Traces"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("SLA"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("SLO"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-6b8cbd42ae", propkey:decodeURL("BillingModel"), propvalue:decodeURL("")});
+
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-9a81065a7764439e8786c0e24528eb4d", contenttype:"Folder"});
+								dataFolders.push({id:"id-9a81065a7764439e8786c0e24528eb4d", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-ba25d3cc6e", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-ba25d3cc6e", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-CIO"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-4f700b7ef6", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-4f700b7ef6", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-%E8%91%A3%E4%BA%8B%E6%9C%83"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-164af088db", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-164af088db", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-CFO"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-f8820eea3b", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-f8820eea3b", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-CISO"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-131ae69d3f", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-131ae69d3f", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-%E7%87%9F%E9%81%8B%E9%95%B7"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-52328d5d5a", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-52328d5d5a", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-%E8%B3%87%E6%96%99%E9%95%B7"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-98e941ffa8", contenttype:"Stakeholder"});
+										dataElements.push({id:"id-98e941ffa8", type:"Stakeholder", specialization:decodeURL(""), name:decodeURL("STR-Stakeholder-%E4%BA%8B%E6%A5%AD%E7%BE%A4%E9%95%B7"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-a04fd15fa3", contenttype:"Driver"});
+										dataElements.push({id:"id-a04fd15fa3", type:"Driver", specialization:decodeURL(""), name:decodeURL("STR-Driver-%E6%88%90%E6%9C%AC%E5%84%AA%E5%8C%96"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-d6987b60e5", contenttype:"Driver"});
+										dataElements.push({id:"id-d6987b60e5", type:"Driver", specialization:decodeURL(""), name:decodeURL("STR-Driver-%E4%B8%8A%E5%B8%82%E9%80%9F%E5%BA%A6"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-63a794f1f1", contenttype:"Driver"});
+										dataElements.push({id:"id-63a794f1f1", type:"Driver", specialization:decodeURL(""), name:decodeURL("STR-Driver-%E5%BD%88%E6%80%A7%E6%93%B4%E5%B1%95"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-50d79d3159", contenttype:"Driver"});
+										dataElements.push({id:"id-50d79d3159", type:"Driver", specialization:decodeURL(""), name:decodeURL("STR-Driver-%E8%B3%87%E6%96%99%E4%B8%BB%E6%AC%8A%E8%88%87%E6%B3%95%E9%81%B5"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-1ceb8562fd", contenttype:"Assessment"});
+										dataElements.push({id:"id-1ceb8562fd", type:"Assessment", specialization:decodeURL(""), name:decodeURL("STR-Assessment-%E9%9B%B2%E7%AB%AF%E6%8E%A1%E7%94%A8%E6%88%90%E7%86%9F%E5%BA%A6"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-31154acf06", contenttype:"Assessment"});
+										dataElements.push({id:"id-31154acf06", type:"Assessment", specialization:decodeURL(""), name:decodeURL("STR-Assessment-TCO%E5%9F%BA%E7%B7%9A"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-6c2344d629", contenttype:"Assessment"});
+										dataElements.push({id:"id-6c2344d629", type:"Assessment", specialization:decodeURL(""), name:decodeURL("STR-Assessment-%E9%97%9C%E9%8D%B5%E9%A2%A8%E9%9A%AA%E7%86%B1%E9%BB%9E"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-62ac9da38a", contenttype:"Goal"});
+										dataElements.push({id:"id-62ac9da38a", type:"Goal", specialization:decodeURL(""), name:decodeURL("STR-Goal-%E6%8F%90%E5%8D%87%E9%9B%B2%E6%8E%A1%E7%94%A8%E7%8E%87"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-be74e46f49", contenttype:"Goal"});
+										dataElements.push({id:"id-be74e46f49", type:"Goal", specialization:decodeURL(""), name:decodeURL("STR-Goal-%E5%BC%B7%E5%8C%96%E5%8F%AF%E7%94%A8%E6%80%A7%E8%88%87%E9%9F%8C%E6%80%A7"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-888f812d95", contenttype:"Goal"});
+										dataElements.push({id:"id-888f812d95", type:"Goal", specialization:decodeURL(""), name:decodeURL("STR-Goal-%E7%B8%AE%E7%9F%AD%E8%AE%8A%E6%9B%B4%E9%80%B1%E6%9C%9F"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-0b273d0584", contenttype:"Goal"});
+										dataElements.push({id:"id-0b273d0584", type:"Goal", specialization:decodeURL(""), name:decodeURL("STR-Goal-%E6%8A%80%E8%A1%93%E5%82%B5%E6%B8%85%E5%84%9F"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-7b9ee912fd", contenttype:"Outcome"});
+										dataElements.push({id:"id-7b9ee912fd", type:"Outcome", specialization:decodeURL(""), name:decodeURL("STR-Outcome-%E6%88%90%E6%9C%AC%E9%99%8D%E5%B9%85"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-83aca3401c", contenttype:"Outcome"});
+										dataElements.push({id:"id-83aca3401c", type:"Outcome", specialization:decodeURL(""), name:decodeURL("STR-Outcome-MTTR%E9%99%8D%E4%BD%8E"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-c58551b7b0", contenttype:"Outcome"});
+										dataElements.push({id:"id-c58551b7b0", type:"Outcome", specialization:decodeURL(""), name:decodeURL("STR-Outcome-%E9%83%A8%E7%BD%B2%E9%A0%BB%E7%8E%87%E6%8F%90%E5%8D%87"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-be200a93c6", contenttype:"Principle"});
+										dataElements.push({id:"id-be200a93c6", type:"Principle", specialization:decodeURL(""), name:decodeURL("STR-Principle-CloudFirst"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-7fe31bda9a", contenttype:"Principle"});
+										dataElements.push({id:"id-7fe31bda9a", type:"Principle", specialization:decodeURL(""), name:decodeURL("STR-Principle-SecurityByDesign"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-53803073ba", contenttype:"Principle"});
+										dataElements.push({id:"id-53803073ba", type:"Principle", specialization:decodeURL(""), name:decodeURL("STR-Principle-Composability"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-fc43547d1f", contenttype:"Principle"});
+										dataElements.push({id:"id-fc43547d1f", type:"Principle", specialization:decodeURL(""), name:decodeURL("STR-Principle-AIReady"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-ca08d21f64", contenttype:"Requirement"});
+										dataElements.push({id:"id-ca08d21f64", type:"Requirement", specialization:decodeURL(""), name:decodeURL("STR-Requirement-RTO"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-27e518105c", contenttype:"Requirement"});
+										dataElements.push({id:"id-27e518105c", type:"Requirement", specialization:decodeURL(""), name:decodeURL("STR-Requirement-RPO"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-757c0c222c", contenttype:"Requirement"});
+										dataElements.push({id:"id-757c0c222c", type:"Requirement", specialization:decodeURL(""), name:decodeURL("STR-Requirement-%E8%B3%87%E6%96%99%E5%88%86%E9%A1%9E%E8%88%87%E4%B8%BB%E6%AC%8A"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-5faa25bba8", contenttype:"Requirement"});
+										dataElements.push({id:"id-5faa25bba8", type:"Requirement", specialization:decodeURL(""), name:decodeURL("STR-Requirement-SLO%E8%88%87%E7%A8%BD%E6%A0%B8%E8%BF%BD%E8%B9%A4"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-594280b263", contenttype:"Constraint"});
+										dataElements.push({id:"id-594280b263", type:"Constraint", specialization:decodeURL(""), name:decodeURL("STR-Constraint-%E5%8D%80%E5%9F%9F%E8%88%87%E4%B8%BB%E6%AC%8A%E9%99%90%E5%88%B6"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-1df33590bf", contenttype:"Constraint"});
+										dataElements.push({id:"id-1df33590bf", type:"Constraint", specialization:decodeURL(""), name:decodeURL("STR-Constraint-%E4%BE%9B%E6%87%89%E5%95%86%E9%8E%96%E5%AE%9A"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-35284b4c1a", contenttype:"Constraint"});
+										dataElements.push({id:"id-35284b4c1a", type:"Constraint", specialization:decodeURL(""), name:decodeURL("STR-Constraint-%E7%B6%AD%E9%81%8B%E6%99%82%E6%AE%B5%E9%99%90%E5%88%B6"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-9a81065a7764439e8786c0e24528eb4d", contentid:"id-9550bcd028", contenttype:"Outcome"});
+										dataElements.push({id:"id-9550bcd028", type:"Outcome", specialization:decodeURL(""), name:decodeURL("RUN-Outcome-MTTR%E9%99%8D%E4%BD%8E"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-e08a6d4739bd4a8194beb24874bd6598", contenttype:"Folder"});
+								dataFolders.push({id:"id-e08a6d4739bd4a8194beb24874bd6598", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-477c4cd67e", contenttype:"WorkPackage"});
+										dataElements.push({id:"id-477c4cd67e", type:"WorkPackage", specialization:decodeURL(""), name:decodeURL("IMP-WorkPackage-%E9%81%B7%E7%A7%BB%E6%A2%AF%E6%AC%A1W1"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-477c4cd67e", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-477c4cd67e", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-477c4cd67e", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-a3a9c88760", contenttype:"WorkPackage"});
+										dataElements.push({id:"id-a3a9c88760", type:"WorkPackage", specialization:decodeURL(""), name:decodeURL("IMP-WorkPackage-%E9%81%B7%E7%A7%BB%E6%A2%AF%E6%AC%A1W2"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-a3a9c88760", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-a3a9c88760", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-a3a9c88760", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-2589b6cd3e", contenttype:"WorkPackage"});
+										dataElements.push({id:"id-2589b6cd3e", type:"WorkPackage", specialization:decodeURL(""), name:decodeURL("IMP-WorkPackage-%E5%B9%B3%E5%8F%B0%E5%BB%BA%E7%BD%AE"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-2589b6cd3e", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-2589b6cd3e", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-2589b6cd3e", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-e0df344385", contenttype:"WorkPackage"});
+										dataElements.push({id:"id-e0df344385", type:"WorkPackage", specialization:decodeURL(""), name:decodeURL("IMP-WorkPackage-%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%B5%B1%E9%87%8D%E6%A7%8B"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-e0df344385", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-e0df344385", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-e0df344385", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-da3c5bac56", contenttype:"Deliverable"});
+										dataElements.push({id:"id-da3c5bac56", type:"Deliverable", specialization:decodeURL(""), name:decodeURL("IMP-Deliverable-%E4%B8%8A%E7%B7%9A%E6%B8%85%E5%96%AE"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-da3c5bac56", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-da3c5bac56", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-da3c5bac56", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-e7687b4ab0", contenttype:"Deliverable"});
+										dataElements.push({id:"id-e7687b4ab0", type:"Deliverable", specialization:decodeURL(""), name:decodeURL("IMP-Deliverable-%E6%8E%A7%E5%88%B6%E8%A6%81%E6%B1%82%E7%AC%A6%E5%90%88%E6%80%A7%E5%A0%B1%E5%91%8A"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-e7687b4ab0", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-e7687b4ab0", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-e7687b4ab0", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-99b4f98d9d", contenttype:"Deliverable"});
+										dataElements.push({id:"id-99b4f98d9d", type:"Deliverable", specialization:decodeURL(""), name:decodeURL("IMP-Deliverable-%E9%81%8B%E7%B6%ADRunbook"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-99b4f98d9d", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-99b4f98d9d", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-99b4f98d9d", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-4d6684efad", contenttype:"Plateau"});
+										dataElements.push({id:"id-4d6684efad", type:"Plateau", specialization:decodeURL(""), name:decodeURL("IMP-Plateau-AsIs"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-25016e0762", contenttype:"Plateau"});
+										dataElements.push({id:"id-25016e0762", type:"Plateau", specialization:decodeURL(""), name:decodeURL("IMP-Plateau-ToBe"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-6e9fff87c5", contenttype:"Gap"});
+										dataElements.push({id:"id-6e9fff87c5", type:"Gap", specialization:decodeURL(""), name:decodeURL("IMP-Gap-%E8%83%BD%E5%8A%9B%E7%BC%BA%E5%8F%A3"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-325a54e364", contenttype:"Gap"});
+										dataElements.push({id:"id-325a54e364", type:"Gap", specialization:decodeURL(""), name:decodeURL("IMP-Gap-%E5%90%88%E8%A6%8F%E7%BC%BA%E5%8F%A3"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-9e75c93f84", contenttype:"Gap"});
+										dataElements.push({id:"id-9e75c93f84", type:"Gap", specialization:decodeURL(""), name:decodeURL("IMP-Gap-%E6%8A%80%E8%A1%93%E7%BC%BA%E5%8F%A3"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-ba6a00e17b", contenttype:"ImplementationEvent"});
+										dataElements.push({id:"id-ba6a00e17b", type:"ImplementationEvent", specialization:decodeURL(""), name:decodeURL("IMP-Event-%E7%92%B0%E5%A2%83%E5%95%9F%E7%94%A8"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-ba6a00e17b", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-ba6a00e17b", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-ba6a00e17b", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+									dataFoldersContent.push({folderid:"id-e08a6d4739bd4a8194beb24874bd6598", contentid:"id-b5296c876b", contenttype:"ImplementationEvent"});
+										dataElements.push({id:"id-b5296c876b", type:"ImplementationEvent", specialization:decodeURL(""), name:decodeURL("IMP-Event-%E9%97%9C%E9%8D%B5%E7%B3%BB%E7%B5%B1%E5%88%87%E6%8F%9B"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-b5296c876b", propkey:decodeURL("Quarter"), propvalue:decodeURL("FY25Q1")});
+													dataProperties.push({conceptid:"id-b5296c876b", propkey:decodeURL("Status"), propvalue:decodeURL("Planned")});
+													dataProperties.push({conceptid:"id-b5296c876b", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-58dc7426d87c4a0688e9848105aa9508", contenttype:"Folder"});
+								dataFolders.push({id:"id-58dc7426d87c4a0688e9848105aa9508", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-638293ba23", contenttype:"Location"});
+										dataElements.push({id:"id-638293ba23", type:"Location", specialization:decodeURL(""), name:decodeURL("LOC-Location-AP-Northeast-1"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-638293ba23", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-638293ba23", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-638293ba23", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-638293ba23", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-61e85bfbbd", contenttype:"Location"});
+										dataElements.push({id:"id-61e85bfbbd", type:"Location", specialization:decodeURL(""), name:decodeURL("LOC-Location-AP-Southeast-1"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-61e85bfbbd", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-61e85bfbbd", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-61e85bfbbd", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-61e85bfbbd", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-b641e0a6da", contenttype:"Location"});
+										dataElements.push({id:"id-b641e0a6da", type:"Location", specialization:decodeURL(""), name:decodeURL("LOC-Location-Taiwan"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-b641e0a6da", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b641e0a6da", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-b641e0a6da", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-b641e0a6da", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-d0cc3fc6ca", contenttype:"Location"});
+										dataElements.push({id:"id-d0cc3fc6ca", type:"Location", specialization:decodeURL(""), name:decodeURL("LOC-Location-Japan"), documentation:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0cc3fc6ca", propkey:decodeURL("Provider"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0cc3fc6ca", propkey:decodeURL("Region"), propvalue:decodeURL("")});
+													dataProperties.push({conceptid:"id-d0cc3fc6ca", propkey:decodeURL("Owner"), propvalue:decodeURL("TBD")});
+													dataProperties.push({conceptid:"id-d0cc3fc6ca", propkey:decodeURL("Lifecycle"), propvalue:decodeURL("As-Is")});
+
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-7a49c22c41", contenttype:"Grouping"});
+										dataElements.push({id:"id-7a49c22c41", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E9%9B%B2%E4%BE%9B%E6%87%89%E5%95%86%EF%BC%88AWS%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-cbe55c13d6", contenttype:"Grouping"});
+										dataElements.push({id:"id-cbe55c13d6", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E9%9B%B2%E4%BE%9B%E6%87%89%E5%95%86%EF%BC%88Azure%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-d170944e2c", contenttype:"Grouping"});
+										dataElements.push({id:"id-d170944e2c", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E9%9B%B2%E4%BE%9B%E6%87%89%E5%95%86%EF%BC%88GCP%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-1452856a59", contenttype:"Grouping"});
+										dataElements.push({id:"id-1452856a59", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%92%B0%E5%A2%83%EF%BC%88Dev%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-5e9ace12f7", contenttype:"Grouping"});
+										dataElements.push({id:"id-5e9ace12f7", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%92%B0%E5%A2%83%EF%BC%88Test%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-5346623ef4", contenttype:"Grouping"});
+										dataElements.push({id:"id-5346623ef4", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%92%B0%E5%A2%83%EF%BC%88Prod%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-8b3dda0017", contenttype:"Grouping"});
+										dataElements.push({id:"id-8b3dda0017", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%B6%B2%E5%9F%9F%EF%BC%88%E6%A5%AD%E5%8B%99%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-2012f5bd39", contenttype:"Grouping"});
+										dataElements.push({id:"id-2012f5bd39", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%B6%B2%E5%9F%9F%EF%BC%88%E5%B9%B3%E5%8F%B0%EF%BC%89"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-58dc7426d87c4a0688e9848105aa9508", contentid:"id-09662e81f7", contenttype:"Grouping"});
+										dataElements.push({id:"id-09662e81f7", type:"Grouping", specialization:decodeURL(""), name:decodeURL("TECH-Group-%E7%B6%B2%E5%9F%9F%EF%BC%88%E8%B3%87%E6%96%99%EF%BC%89"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contenttype:"Folder"});
+								dataFolders.push({id:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-5660ab3971b4", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-5660ab3971b4", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ba25d3cc6e", targetid:"id-a04fd15fa3"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-43a1806461c3", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-43a1806461c3", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ba25d3cc6e", targetid:"id-d6987b60e5"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-ff75344d3cc8", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-ff75344d3cc8", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ba25d3cc6e", targetid:"id-63a794f1f1"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-d918127a98ee", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-d918127a98ee", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ba25d3cc6e", targetid:"id-50d79d3159"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-f2f44b4e566f", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-f2f44b4e566f", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4f700b7ef6", targetid:"id-62ac9da38a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-2da40e0ee1c7", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-2da40e0ee1c7", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4f700b7ef6", targetid:"id-be74e46f49"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-2ad11646884e", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-2ad11646884e", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4f700b7ef6", targetid:"id-888f812d95"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e6b498bfed12", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-e6b498bfed12", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4f700b7ef6", targetid:"id-0b273d0584"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-b720d937edd0", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-b720d937edd0", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a04fd15fa3", targetid:"id-62ac9da38a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-bb177fbd559d", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-bb177fbd559d", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-63a794f1f1", targetid:"id-be74e46f49"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-fd1c23ffb021", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-fd1c23ffb021", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-50d79d3159", targetid:"id-0b273d0584"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-64eea8d7e12b", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-64eea8d7e12b", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-1ceb8562fd", targetid:"id-62ac9da38a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-82ccb07a25d3", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-82ccb07a25d3", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-1ceb8562fd", targetid:"id-888f812d95"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-bef974f570ad", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-bef974f570ad", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-31154acf06", targetid:"id-7b9ee912fd"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-15b1a7874c5c", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-15b1a7874c5c", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6c2344d629", targetid:"id-ca08d21f64"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-20d20a7adacd", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-20d20a7adacd", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6c2344d629", targetid:"id-27e518105c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-353b8b34dfcc", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-353b8b34dfcc", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6c2344d629", targetid:"id-1df33590bf"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-16d71456abf6", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-16d71456abf6", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-75d5c98660", targetid:"id-be200a93c6"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-6751d70b4113", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-6751d70b4113", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-0f7ddf2bec", targetid:"id-be200a93c6"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-b32377c31f00", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-b32377c31f00", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-7fe31bda9a", targetid:"id-757c0c222c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-dc26f49cd30d", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-dc26f49cd30d", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-7fe31bda9a", targetid:"id-5faa25bba8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-b121493a8536", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-b121493a8536", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-3613b9cbda", targetid:"id-53803073ba"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-7d49cdf1b0f5", contenttype:"InfluenceRelationship"});
+										dataRelationships.push({id:"rel-7d49cdf1b0f5", type:"InfluenceRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-79c0acd561", targetid:"id-fc43547d1f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-1f2495afe713", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-1f2495afe713", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-f0cd2c5938", targetid:"id-be74e46f49"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-42b032be0d91", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-42b032be0d91", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a52800b000", targetid:"id-888f812d95"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e7f1085148ce", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-e7f1085148ce", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-f956c71db8", targetid:"id-7b9ee912fd"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-4380150e9287", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-4380150e9287", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-d2ffb49f21", targetid:"id-0b273d0584"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-509d2c997ff8", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-509d2c997ff8", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-79c0acd561", targetid:"id-62ac9da38a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-894f0d3aef6d", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-894f0d3aef6d", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-3441dcf000", targetid:"id-c58551b7b0"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-f580cb3000f0", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-f580cb3000f0", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a52800b000", targetid:"id-75d5c98660"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-42e6da187e03", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-42e6da187e03", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-79c0acd561", targetid:"id-3613b9cbda"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-afb155f73acb", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-afb155f73acb", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-f0cd2c5938", targetid:"id-0f7ddf2bec"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-486358b86a63", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-486358b86a63", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-9e6892ddd7", targetid:"id-f956c71db8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-666eaff4cb43", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-666eaff4cb43", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-9e6892ddd7", targetid:"id-75d5c98660"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-54bd41ccf124", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-54bd41ccf124", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-881a414443", targetid:"id-0f7ddf2bec"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-2d0ec347dd1e", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-2d0ec347dd1e", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-5a0fca35e2", targetid:"id-a52800b000"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-8a4da61a87a0", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-8a4da61a87a0", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-44f5beeb27", targetid:"id-c58551b7b0"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-a316275d76ab", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-a316275d76ab", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-582ed483f4", targetid:"id-83aca3401c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-7d0866b5d5d2", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-7d0866b5d5d2", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-d0b7f6f510", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-578f616d8ce8", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-578f616d8ce8", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-68d40f7f8c", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-346c4636b03c", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-346c4636b03c", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45c59dfb1f", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-3b1b8f39bd7c", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-3b1b8f39bd7c", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-104da5b1a8", targetid:"id-0bb4c4d067"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e14774adc63c", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-e14774adc63c", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-f85e52b820", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-d06767b0824c", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-d06767b0824c", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c7874709b1", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-59d9cff98e2d", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-59d9cff98e2d", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-b31924d802", targetid:"id-d0b7f6f510"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-dde658d1ce70", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-dde658d1ce70", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-853389cff3", targetid:"id-45c59dfb1f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e4ab20773957", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-e4ab20773957", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4178fd4c75", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-7648b328f78a", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-7648b328f78a", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-0f4150a4ee", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e40c0c7b115c", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-e40c0c7b115c", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4dd9b20370", targetid:"id-4d7520f4cc"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-5ce119a7abc5", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-5ce119a7abc5", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4dd9b20370", targetid:"id-ef01fb8547"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-3766209e8758", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-3766209e8758", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4dd9b20370", targetid:"id-940749e9c8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-288617ddac31", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-288617ddac31", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4dd9b20370", targetid:"id-3ac34eccc4"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-bd913366721f", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-bd913366721f", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a9bd5e9997", targetid:"id-d0b7f6f510"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-d68e9ba25b58", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-d68e9ba25b58", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a9bd5e9997", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-97199711b301", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-97199711b301", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-7b15ee4447", targetid:"id-45c59dfb1f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9dca251fee1e", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-9dca251fee1e", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4cd40a5131", targetid:"id-d0b7f6f510"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-bb141448ca08", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-bb141448ca08", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4cd40a5131", targetid:"id-45c59dfb1f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e3d52ff00ff8", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-e3d52ff00ff8", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-4cd40a5131", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-488164b07b69", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-488164b07b69", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45a5274f33", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-44d29a1de578", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-44d29a1de578", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a5f02d8984", targetid:"id-d0b7f6f510"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-f6e93e853d59", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-f6e93e853d59", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a5f02d8984", targetid:"id-45c59dfb1f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-01c593bf924c", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-01c593bf924c", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-4cd40a5131"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-78518909a7b3", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-78518909a7b3", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-1ba8bb339af7", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-1ba8bb339af7", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-45a5274f33"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-780f41c6d97d", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-780f41c6d97d", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-cc9b47a18f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e90f78687ff6", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-e90f78687ff6", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c8be790774", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-d94f64ecc83a", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-d94f64ecc83a", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-94e2f45cb9", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-98f38d2e0fa4", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-98f38d2e0fa4", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-685a18cadd", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-85a300461a85", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-85a300461a85", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-deffb2bd88", targetid:"id-4cd40a5131"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-c5bad3bfc349", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-c5bad3bfc349", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-d979aacd73", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-84a51b8c70fd", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-84a51b8c70fd", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-60461b2150", targetid:"id-45a5274f33"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-05a396a65f40", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-05a396a65f40", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-224d48ef3d", targetid:"id-45e1279525"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-70ee6bb6a8c2", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-70ee6bb6a8c2", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-cf3e9195ef", targetid:"id-45e1279525"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e6ca4e4bb084", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-e6ca4e4bb084", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-2f6831dcd2", targetid:"id-10b4aaedb5"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-970d3632c1e2", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-970d3632c1e2", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-48e32a106e", targetid:"id-975c1df85a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-2b0a3a28c76d", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-2b0a3a28c76d", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-85e7bf939f", targetid:"id-c8be790774"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-4205d86ee1bf", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-4205d86ee1bf", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-41caa4614c", targetid:"id-883372926e"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-96655983d072", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-96655983d072", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c94fb64d3f", targetid:"id-45e1279525"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-6eb9bb1e0076", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-6eb9bb1e0076", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-df6c119e1f", targetid:"id-45e1279525"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-c127f64b55d2", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-c127f64b55d2", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-e9fd07594a", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-a4152aaf678e", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-a4152aaf678e", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-567bc88df0", targetid:"id-cc9b47a18f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9e6e107e014c", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-9e6e107e014c", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-638293ba23"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-b318234ddcb8", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-b318234ddcb8", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-975c1df85a", targetid:"id-61e85bfbbd"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-002cfb7fec20", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-002cfb7fec20", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-10b4aaedb5", targetid:"id-d0cc3fc6ca"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-19e66999836b", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-19e66999836b", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c8be790774", targetid:"id-b641e0a6da"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-a2460b2b7c9d", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-a2460b2b7c9d", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c8be790774", targetid:"id-ad79fd59bb"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-522210c9a4d3", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-522210c9a4d3", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-45e1279525", targetid:"id-7a49c22c41"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9bac90553cc9", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-9bac90553cc9", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-10b4aaedb5", targetid:"id-cbe55c13d6"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-d5d689befdb3", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-d5d689befdb3", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-975c1df85a", targetid:"id-d170944e2c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-7f9a67ff51e7", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-7f9a67ff51e7", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-c8be790774", targetid:"id-5346623ef4"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-4a38d636cf43", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-4a38d636cf43", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-0e0768e723", targetid:"id-7a49c22c41"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-060893299b01", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-060893299b01", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-0e0768e723", targetid:"id-cbe55c13d6"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-8c867b2bb6d5", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-8c867b2bb6d5", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-0e0768e723", targetid:"id-d170944e2c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-016f3764d919", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-016f3764d919", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-987068de70", targetid:"id-efa297c18b"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-18a346ca2d34", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-18a346ca2d34", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-987068de70", targetid:"id-cc9b47a18f"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-57a1895f5292", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-57a1895f5292", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-506273cc87", targetid:"id-4d7520f4cc"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-8868eed67d34", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-8868eed67d34", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-477c4cd67e", targetid:"id-a52800b000"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-a0583ae6f705", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-a0583ae6f705", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-477c4cd67e", targetid:"id-45e1279525"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-cf2b3cfed863", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-cf2b3cfed863", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a3a9c88760", targetid:"id-79c0acd561"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-03cafd5d22fb", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-03cafd5d22fb", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-2589b6cd3e", targetid:"id-a5f02d8984"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-367dfa57f47c", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-367dfa57f47c", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-e0df344385", targetid:"id-104da5b1a8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-dc4b2d487abb", contenttype:"TriggeringRelationship"});
+										dataRelationships.push({id:"rel-dc4b2d487abb", type:"TriggeringRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-477c4cd67e", targetid:"id-a3a9c88760"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-08e0a3bf99e9", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-08e0a3bf99e9", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-da3c5bac56", targetid:"id-5faa25bba8"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-8f221f7f7e9e", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-8f221f7f7e9e", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-e7687b4ab0", targetid:"id-757c0c222c"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-5d84008191f3", contenttype:"RealizationRelationship"});
+										dataRelationships.push({id:"rel-5d84008191f3", type:"RealizationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-99b4f98d9d", targetid:"id-ca08d21f64"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-ad5d35e0b522", contenttype:"TriggeringRelationship"});
+										dataRelationships.push({id:"rel-ad5d35e0b522", type:"TriggeringRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ba6a00e17b", targetid:"id-2589b6cd3e"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-bd47a3d5b118", contenttype:"TriggeringRelationship"});
+										dataRelationships.push({id:"rel-bd47a3d5b118", type:"TriggeringRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-b5296c876b", targetid:"id-e0df344385"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-004b1479b041", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-004b1479b041", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6e9fff87c5", targetid:"id-4d6684efad"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-6f2ff85f9d48", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-6f2ff85f9d48", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6e9fff87c5", targetid:"id-25016e0762"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-e3437c0c801d", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-e3437c0c801d", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-325a54e364", targetid:"id-4d6684efad"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9fd157138013", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-9fd157138013", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-325a54e364", targetid:"id-25016e0762"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-f29e98eab87a", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-f29e98eab87a", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-9e75c93f84", targetid:"id-4d6684efad"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9f315fb9e270", contenttype:"AssociationRelationship"});
+										dataRelationships.push({id:"rel-9f315fb9e270", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-9e75c93f84", targetid:"id-25016e0762"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-9d596d150774", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-9d596d150774", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-b2ae05c60d", targetid:"id-78abf1214a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-f9785f3b31da", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-f9785f3b31da", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-1ce5a016bb", targetid:"id-78abf1214a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-29ce36556e1b", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-29ce36556e1b", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-d765d857ee", targetid:"id-78abf1214a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-57a5591a45ea", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"rel-57a5591a45ea", type:"ServingRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-6b8cbd42ae", targetid:"id-78abf1214a"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-c4e15d27770a", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-c4e15d27770a", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a5de024ee9", targetid:"id-e90ab859c5"});
+									dataFoldersContent.push({folderid:"id-a2722ddc5e8941b493e9a1fd6dfe0e1f", contentid:"rel-8c58f1fc7498", contenttype:"AccessRelationship"});
+										dataRelationships.push({id:"rel-8c58f1fc7498", type:"AccessRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-78abf1214a", targetid:"id-b0a3a06d6f"});
+
+								dataFoldersContent.push({folderid:"id-990d60df63ed4e7ca723ff13e9898285", contentid:"id-195f744a587743bf8c2a13674d747047", contenttype:"Folder"});
+								dataFolders.push({id:"id-195f744a587743bf8c2a13674d747047", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-6f09ff1b8c9946fd98dd877c9a3f1432", type:"ArchimateDiagramModel", name:decodeURL("Strategy%26Movitation+"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-ba25d3cc6e", contenttype:"Stakeholder"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-4f700b7ef6", contenttype:"Stakeholder"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-a04fd15fa3", contenttype:"Driver"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-d6987b60e5", contenttype:"Driver"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-63a794f1f1", contenttype:"Driver"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-50d79d3159", contenttype:"Driver"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-1ceb8562fd", contenttype:"Assessment"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-31154acf06", contenttype:"Assessment"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-6c2344d629", contenttype:"Assessment"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-be200a93c6", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-7fe31bda9a", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-53803073ba", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-fc43547d1f", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-62ac9da38a", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-be74e46f49", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-888f812d95", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-0b273d0584", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-be200a93c6", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-7fe31bda9a", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-53803073ba", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-fc43547d1f", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-62ac9da38a", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-be74e46f49", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-888f812d95", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-7b9ee912fd", contenttype:"Outcome"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-83aca3401c", contenttype:"Outcome"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-c58551b7b0", contenttype:"Outcome"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-27e518105c", contenttype:"Requirement"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-757c0c222c", contenttype:"Requirement"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-5faa25bba8", contenttype:"Requirement"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-594280b263", contenttype:"Constraint"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-1df33590bf", contenttype:"Constraint"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-35284b4c1a", contenttype:"Constraint"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-f0cd2c5938", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-a52800b000", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-f956c71db8", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-d2ffb49f21", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-79c0acd561", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-3441dcf000", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-75d5c98660", contenttype:"CourseOfAction"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-3613b9cbda", contenttype:"CourseOfAction"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-0f7ddf2bec", contenttype:"CourseOfAction"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-9e6892ddd7", contenttype:"Resource"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-881a414443", contenttype:"Resource"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-5a0fca35e2", contenttype:"Resource"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-44f5beeb27", contenttype:"ValueStream"});
+												dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"id-582ed483f4", contenttype:"ValueStream"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-5660ab3971b4", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-43a1806461c3", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-ff75344d3cc8", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-d918127a98ee", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-f2f44b4e566f", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-2da40e0ee1c7", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-2ad11646884e", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-e6b498bfed12", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-f2f44b4e566f", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-2da40e0ee1c7", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-2ad11646884e", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b720d937edd0", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b720d937edd0", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-bb177fbd559d", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-bb177fbd559d", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-fd1c23ffb021", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-64eea8d7e12b", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-82ccb07a25d3", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-64eea8d7e12b", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-82ccb07a25d3", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-bef974f570ad", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-20d20a7adacd", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-353b8b34dfcc", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b32377c31f00", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-dc26f49cd30d", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b32377c31f00", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-dc26f49cd30d", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-1f2495afe713", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-1f2495afe713", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-afb155f73acb", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-42b032be0d91", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-42b032be0d91", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-f580cb3000f0", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-e7f1085148ce", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-4380150e9287", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-7d49cdf1b0f5", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-7d49cdf1b0f5", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-509d2c997ff8", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-509d2c997ff8", contenttype:"RealizationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-42e6da187e03", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-894f0d3aef6d", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-16d71456abf6", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-16d71456abf6", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b121493a8536", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-b121493a8536", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-6751d70b4113", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-6751d70b4113", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-486358b86a63", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-666eaff4cb43", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-54bd41ccf124", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-2d0ec347dd1e", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-8a4da61a87a0", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-6f09ff1b8c9946fd98dd877c9a3f1432", contentid:"rel-a316275d76ab", contenttype:"RealizationRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-5e39d84835154db299cb34978e2d6df9", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-5e39d84835154db299cb34978e2d6df9", type:"ArchimateDiagramModel", name:decodeURL("Capability+Map"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-d2ffb49f21", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-f956c71db8", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-3441dcf000", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-a52800b000", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-79c0acd561", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-5e39d84835154db299cb34978e2d6df9", contentid:"id-f0cd2c5938", contenttype:"Capability"});
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-b871833ffcbe4982a9d7eda2f5190ffe", type:"ArchimateDiagramModel", name:decodeURL("Service+Map-Business-App-Tech"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-efa297c18b", contenttype:"BusinessService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-0bb4c4d067", contenttype:"BusinessService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-d0b7f6f510", contenttype:"ApplicationService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-68d40f7f8c", contenttype:"ApplicationService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-45c59dfb1f", contenttype:"ApplicationService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-104da5b1a8", contenttype:"ApplicationService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-4cd40a5131", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-45a5274f33", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-a5f02d8984", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-cc9b47a18f", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-b31924d802", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-853389cff3", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-4178fd4c75", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-0f4150a4ee", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-a9bd5e9997", contenttype:"ApplicationInterface"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-7b15ee4447", contenttype:"ApplicationInterface"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-e10e76db8c", contenttype:"ApplicationProcess"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-4dd9b20370", contenttype:"ApplicationProcess"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-4d7520f4cc", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-ef01fb8547", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-940749e9c8", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"id-3ac34eccc4", contenttype:"DataObject"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-7d0866b5d5d2", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-578f616d8ce8", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-346c4636b03c", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-3b1b8f39bd7c", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-bb141448ca08", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-9dca251fee1e", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-e3d52ff00ff8", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-488164b07b69", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-f6e93e853d59", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-44d29a1de578", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-59d9cff98e2d", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-dde658d1ce70", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-e4ab20773957", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-7648b328f78a", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-bd913366721f", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-d68e9ba25b58", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-97199711b301", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-e40c0c7b115c", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-5ce119a7abc5", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-3766209e8758", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-b871833ffcbe4982a9d7eda2f5190ffe", contentid:"rel-288617ddac31", contenttype:"AccessRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-da01c1c6b85c4100a1047e5d05ca909d", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-da01c1c6b85c4100a1047e5d05ca909d", type:"ArchimateDiagramModel", name:decodeURL("Cloud+Platform"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-e9fd07594a", contenttype:"Artifact"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-567bc88df0", contenttype:"Artifact"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-df6c119e1f", contenttype:"Artifact"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-41caa4614c", contenttype:"Device"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-c94fb64d3f", contenttype:"Device"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-ad79fd59bb", contenttype:"Facility"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-d979aacd73", contenttype:"TechnologyInterface"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-60461b2150", contenttype:"TechnologyInterface"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-883372926e", contenttype:"CommunicationNetwork"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-7897f1e4f0", contenttype:"CommunicationNetwork"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-224d48ef3d", contenttype:"CommunicationNetwork"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-45e1279525", contenttype:"Node"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-10b4aaedb5", contenttype:"Node"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-975c1df85a", contenttype:"Node"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-c8be790774", contenttype:"Node"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-cf3e9195ef", contenttype:"Path"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-2f6831dcd2", contenttype:"Path"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-48e32a106e", contenttype:"Path"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-85e7bf939f", contenttype:"Path"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-638293ba23", contenttype:"Location"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-61e85bfbbd", contenttype:"Location"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-b641e0a6da", contenttype:"Location"});
+												dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"id-d0cc3fc6ca", contenttype:"Location"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-6eb9bb1e0076", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-4205d86ee1bf", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-96655983d072", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-05a396a65f40", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-9e6e107e014c", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-002cfb7fec20", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-b318234ddcb8", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-a2460b2b7c9d", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-19e66999836b", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-70ee6bb6a8c2", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-e6ca4e4bb084", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-970d3632c1e2", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-da01c1c6b85c4100a1047e5d05ca909d", contentid:"rel-2b0a3a28c76d", contenttype:"AssociationRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-db06bd3366ba4e0a91fe9215dd06cee2", type:"ArchimateDiagramModel", name:decodeURL("Security%26Compliance"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-7fe31bda9a", contenttype:"Principle"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-757c0c222c", contenttype:"Requirement"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-5faa25bba8", contenttype:"Requirement"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-1df33590bf", contenttype:"Constraint"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-987068de70", contenttype:"Contract"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-506273cc87", contenttype:"Contract"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-0e0768e723", contenttype:"Contract"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-4d7520f4cc", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"id-cc9b47a18f", contenttype:"TechnologyService"});
+
+																		dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"rel-b32377c31f00", contenttype:"InfluenceRelationship"});
+																		dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"rel-dc26f49cd30d", contenttype:"InfluenceRelationship"});
+
+																		dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"rel-18a346ca2d34", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-db06bd3366ba4e0a91fe9215dd06cee2", contentid:"rel-57a1895f5292", contenttype:"AssociationRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-495088a7172d42769e9677fc6a2ab13a", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-495088a7172d42769e9677fc6a2ab13a", type:"ArchimateDiagramModel", name:decodeURL("Finops"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"id-f956c71db8", contenttype:"Capability"});
+												dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"id-0e0768e723", contenttype:"Contract"});
+												dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"id-7b9ee912fd", contenttype:"Outcome"});
+												dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"id-62ac9da38a", contenttype:"Goal"});
+												dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"id-9e6892ddd7", contenttype:"Resource"});
+
+																		dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"rel-e7f1085148ce", contenttype:"RealizationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-495088a7172d42769e9677fc6a2ab13a", contentid:"rel-486358b86a63", contenttype:"AssociationRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-562ec5dae1aa4cd9b70780b1f184c5f9", type:"ArchimateDiagramModel", name:decodeURL("Implementation%26Migtation+Roadmap"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-da3c5bac56", contenttype:"Deliverable"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-e7687b4ab0", contenttype:"Deliverable"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-99b4f98d9d", contenttype:"Deliverable"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-ba6a00e17b", contenttype:"ImplementationEvent"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-b5296c876b", contenttype:"ImplementationEvent"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-325a54e364", contenttype:"Gap"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-9e75c93f84", contenttype:"Gap"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-6e9fff87c5", contenttype:"Gap"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-4d6684efad", contenttype:"Plateau"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-25016e0762", contenttype:"Plateau"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-2589b6cd3e", contenttype:"WorkPackage"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-e0df344385", contenttype:"WorkPackage"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-477c4cd67e", contenttype:"WorkPackage"});
+												dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"id-a3a9c88760", contenttype:"WorkPackage"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-ad5d35e0b522", contenttype:"TriggeringRelationship"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-bd47a3d5b118", contenttype:"TriggeringRelationship"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-e3437c0c801d", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-9fd157138013", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-f29e98eab87a", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-9f315fb9e270", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-004b1479b041", contenttype:"AssociationRelationship"});
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-6f2ff85f9d48", contenttype:"AssociationRelationship"});
+
+																		dataViewsContent.push({viewid:"id-562ec5dae1aa4cd9b70780b1f184c5f9", contentid:"rel-dc4b2d487abb", contenttype:"TriggeringRelationship"});
+
+
+									dataFoldersContent.push({folderid:"id-195f744a587743bf8c2a13674d747047", contentid:"id-9acf01b233ee49339f772ddb94fde763", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-9acf01b233ee49339f772ddb94fde763", type:"ArchimateDiagramModel", name:decodeURL("Run%26Observability"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-78abf1214a", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-b0a3a06d6f", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-e90ab859c5", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-a5de024ee9", contenttype:"BusinessProcess"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-78abf1214a", contenttype:"ApplicationComponent"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-b0a3a06d6f", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-e90ab859c5", contenttype:"DataObject"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-b2ae05c60d", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-1ce5a016bb", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-d765d857ee", contenttype:"TechnologyService"});
+												dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"id-6b8cbd42ae", contenttype:"TechnologyService"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-8c58f1fc7498", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-8c58f1fc7498", contenttype:"AccessRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-c4e15d27770a", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-c4e15d27770a", contenttype:"AccessRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-8c58f1fc7498", contenttype:"AccessRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-8c58f1fc7498", contenttype:"AccessRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-9d596d150774", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-9d596d150774", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-f9785f3b31da", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-f9785f3b31da", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-29ce36556e1b", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-29ce36556e1b", contenttype:"ServingRelationship"});
+
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-57a5591a45ea", contenttype:"ServingRelationship"});
+																		dataViewsContent.push({viewid:"id-9acf01b233ee49339f772ddb94fde763", contentid:"rel-57a5591a45ea", contenttype:"ServingRelationship"});
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
