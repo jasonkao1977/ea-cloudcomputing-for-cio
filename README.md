@@ -1,6 +1,6 @@
 # Cloud Computing Enterprise Architecture
 
-這個專案呈現 CIO 雲端企業架構的模型與視圖。
+這個專案以CIO的觀點來建立雲端的企業架構的模型與視圖。
 
 ## 模型檔案
 
