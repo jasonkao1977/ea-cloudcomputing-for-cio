@@ -1,6 +1,10 @@
-# Cloud Computing Enterprise Architecture
+# Enterprise Architecture of Cloud Computing
 
-這個專案以CIO的觀點來建立雲端的企業架構的模型與視圖。
+這個專案是以CIO的觀點(Viewpoint)來創建組織雲端運算的企業架構
+
+## Archi架構視圖
+
+[EA Views-以網頁方式呈現](https://jasonkao1977.github.io/ea-cloudcomputing-for-cio/)
 
 ## 模型檔案
 
@@ -17,6 +21,3 @@
 * `Implementation&Migtation Roadmap` – 位於 `Views/Implementation&Migtation_Roadmap.xml`
 * `Run&Observability` – 位於 `Views/Run&Observability.xml`
 
-## Archi View
-
-[EA Views-以網頁方式呈現](https://jasonkao1977.github.io/ea-cloudcomputing-for-cio/)
