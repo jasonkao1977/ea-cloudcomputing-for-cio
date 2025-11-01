@@ -1,5 +1,8 @@
 # Cloud Computing Enterprise Architecture
 
+[EA Views](https://jasonkao1977.github.io/ea-cloudcomputing-for-cio/)
+
+
 這個專案以CIO的觀點來建立雲端的企業架構的模型與視圖。
 
 ## 模型檔案
