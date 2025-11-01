@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>CloudComputing - HTML Report</title>
-<style>body { font-family: Arial, sans-serif; margin: 2em; } table { border-collapse: collapse; } th, td { border: 1px solid #ccc; padding: 0.5em; } th { background-color: #f0f0f0; }</style>
-</head>
-<body>
-<h1>CloudComputing - HTML Report</h1>
-<h2>Views</h2>
-<ul>
-</ul>
-<h2>Elements Summary</h2>
-<table>
-<tr><th>Element Type</th><th>Count</th><th>Names</th></tr>
-</table>
-<p>Report generated automatically.</p>
-</body></html>
+# Cloud Computing Enterprise Architecture
+
+這個專案以CIO的觀點來建立雲端的企業架構的模型與視圖。
+
+## 模型檔案
+
+* `Model_Files/cloudcomputing.archimate` – 完整的 ArchiMate 模型檔案。
+
+## 視圖
+
+* `Strategy&Movitation` – 位於 `Views/Strategy&Movitation.xml`
+* `Capability Map` – 位於 `Views/Capability_Map.xml`
+* `Service Map-Business-App-Tech` – 位於 `Views/Service_Map-Business-App-Tech.xml`
+* `Cloud Platform` – 位於 `Views/Cloud_Platform.xml`
+* `Security&Compliance` – 位於 `Views/Security&Compliance.xml`
+* `Finops` – 位於 `Views/Finops.xml`
+* `Implementation&Migtation Roadmap` – 位於 `Views/Implementation&Migtation_Roadmap.xml`
+* `Run&Observability` – 位於 `Views/Run&Observability.xml`
