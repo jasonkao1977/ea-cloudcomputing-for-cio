@@ -14,5 +14,6 @@
 6. [FinOps](06_FinOps.md) – 雲端財務管理與成本最佳化實踐。
 7. [實施與遷移路線圖 (Implementation & Migration Roadmap)](07_Implementation_and_Migration_Roadmap.md) – 規劃與執行遷移至雲端的步驟和里程碑。
 8. [運作與可觀測性 (Run & Observability)](08_Run_and_Observability.md) – 雲端環境日常運作與觀測能力。
+9. [雲端治理與權責歸屬 (Governance & Ownership)]09_Governance_and_Ownership.md) – 雲端架構中各組件的責任歸屬。
 
 每個章節均以簡潔的方式解釋其主題，並含有示意圖以輔助理解。

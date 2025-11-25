@@ -20,4 +20,6 @@
 * `Finops` – 位於 `Views/Finops.xml`
 * `Implementation&Migtation Roadmap` – 位於 `Views/Implementation&Migtation_Roadmap.xml`
 * `Run&Observability` – 位於 `Views/Run&Observability.xml`
+* `Governance&Ownership` – 位於 `Views/Governance&Ownership.xml`
+
 
