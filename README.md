@@ -14,20 +14,20 @@
 ### Layer 1: 戰略與治理 (Strategy & Governance)
 定義「為什麼做」、「目標是什麼」以及「誰負責」。
 * [01. Strategy & Motivation (戰略與動機)](docs/01_strategy_motivation.md)
-* [02. Capability Map (能力地圖)](docs/02_capability_map.md)
+* [02. Capability Map (能力地圖)](docs/02_Capability_Map.md)
 * [03. Governance & Ownership (治理與權責)](docs/03_governance_ownership.md)
 * [04. CCoE Operating Model (雲端卓越中心運作模型)](docs/04_ccoe_operating_model.md)
-* [05. FinOps (財務維運)](docs/05_finops.md)
+* [05. FinOps (財務維運)](docs/05_FinOps.md)
 * [06. Security & Compliance (資安與合規)](docs/06_security_compliance.md)
 
 ### Layer 2: 規劃與服務 (Planning & Services)
 定義「如何執行」以及「提供什麼服務」。
 * [07. Implementation & Migration Roadmap (實施與遷移)](docs/07_implementation_roadmap.md)
-* [08. Service Map (服務地圖)](docs/08_service_map.md)
+* [08. Service Map (服務地圖)](docs/08_Service_Map.md)
 
 ### Layer 3: 邏輯與技術架構 (Logical & Technical)
 展示系統的具體構造與技術堆疊。
-* [09. Cloud Platform (雲端平台架構)](docs/09_cloud_platform.md)
+* [09. Cloud Platform (雲端平台架構)](docs/09_Cloud_Platform.md)
 * [10. Hybrid Cloud Network Topology (混合雲網路拓撲)](docs/10_hybrid_network_topology.md)
 * [11. AI Infrastructure Blueprint (AI 基礎設施藍圖)](docs/11_ai_infrastructure.md)
 * [12. DevOps Platform (DevOps 平台)](docs/12_devops_platform.md)
