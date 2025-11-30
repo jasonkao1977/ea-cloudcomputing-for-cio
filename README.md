@@ -17,7 +17,7 @@
 * [02. Capability Map (能力地圖)](docs/02_capability_map.md)
 * [03. Governance & Ownership (治理與權責)](docs/03_governance_ownership.md)
 * [04. CCoE Operating Model (雲端卓越中心運作模型)](docs/04_ccoe_operating_model.md)
-* [05. FinOps (財務維運)](docs/05_finops)
+* [05. FinOps (財務維運)](docs/05_finops.md)
 * [06. Security & Compliance (資安與合規)](docs/06_security_compliance.md)
 
 ### Layer 2: 規劃與服務 (Planning & Services)
