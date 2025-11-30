@@ -11,7 +11,7 @@
 | :--- | :--- | :--- |
 | **01. Strategy & Motivation** | [Link](./01_strategy_motivation.md) | 展示雲端轉型的驅動力、戰略目標與指導原則。 |
 | **02. Capability Map** | [Link](./02_Capability_Map.md) | 定義核心能力（如 FinOps, MLOps）及其成熟度與 KPI。 |
-| **03. Governance & Ownership** | [Link](./03_Fovernance_Ownership.md) | 解決「權責不清」問題，定義角色與資產的 RACI 關係。 |
+| **03. Governance & Ownership** | [Link](./03_governance_ownership.md) | 解決「權責不清」問題，定義角色與資產的 RACI 關係。 |
 | **04. CCoE Operating Model** | [Link](./04_ccoe_operating_model.md) | 描述雲端卓越中心的運作機制與跨部門協作。 |
 | **05. FinOps** | [Link](./05_FinOps.md) | 連結預算、合約與成本優化能力，實現雲端財務管理。 |
 | **06. Security & Compliance** | [Link](./06_security_compliance.md) | 定義合規約束（如 GDPR）、資安控制點與法律合約。 |
@@ -29,7 +29,7 @@
 
 | 視圖名稱 | 檔案連結 | 簡短說明 |
 | :--- | :--- | :--- |
-| **09. Cloud Platform** | [Link](./09_cloud_platform.md) | 多雲混合架構的高階技術概覽，包含運算與資料庫服務。 |
+| **09. Cloud Platform** | [Link](./09_Cloud_Platform.md) | 多雲混合架構的高階技術概覽，包含運算與資料庫服務。 |
 | **10. Hybrid Network Topology**| [Link](./10_hybrid_network_topology.md)| 地端與雲端的網路連接（VPN, Direct Connect）與流量分發。 |
 | **11. AI Infrastructure** | [Link](./11_ai_infrastructure.md) | 支撐 GenAI 的底層算力（GPU）、向量庫與 RAG 引擎架構。 |
 | **12. DevOps Platform** | [Link](./12_devops_platform.md) | 軟體交付流水線 (CI/CD)、代碼庫與自動化工具鏈。 |
