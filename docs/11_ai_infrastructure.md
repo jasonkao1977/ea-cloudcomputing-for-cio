@@ -12,4 +12,4 @@
     * [cite_start]Object Storage High Performance (高效能物件儲存) [cite: 28]。
 * [cite_start]**流程 (Pipeline)**: ML Pipeline [cite: 28]。
 
-![AI Infrastructure Blueprint](img/11_ai_infrastructure.png)
+![AI Infrastructure Blueprint](img/11_AI_Infrastructure_Blueprint.png)
