@@ -10,4 +10,4 @@
     * [cite_start]技術服務: 容器與Kubernetes, 可觀測性 [cite: 20-22]。
 * [cite_start]**Data Domain**: 資料查詢, 儲存, 資料庫 [cite: 14, 20]。
 * [cite_start]**AI Services**: Prompt Management, AI Gateway, RAG Engine [cite: 117]。
-![Service Map](img/08_service_map.png)
+![Service Map](img/08_Service_Map.png)
