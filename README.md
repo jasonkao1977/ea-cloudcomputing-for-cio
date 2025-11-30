@@ -13,7 +13,7 @@
 
 ### Layer 1: 戰略與治理 (Strategy & Governance)
 定義「為什麼做」、「目標是什麼」以及「誰負責」。
-* [01. Strategy & Motivation (戰略與動機)](docs/01-strategy--motivation-view)
+* [01. Strategy & Motivation (戰略與動機)](docs/01_strategy_motivation.md)
 * [02. Capability Map (能力地圖)](docs/VIEWS_CATALOG.md#02-capability-map)
 * [03. Governance & Ownership (治理與權責)](docs/VIEWS_CATALOG.md#03-governance--ownership-view)
 * [04. CCoE Operating Model (雲端卓越中心運作模型)](docs/VIEWS_CATALOG.md#04-ccoe-operating-model)
