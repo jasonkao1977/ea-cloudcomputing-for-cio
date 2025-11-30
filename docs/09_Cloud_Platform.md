@@ -8,4 +8,4 @@
 * [cite_start]**地端設施**: On-Premise Cluster (混合雲資料中心) [cite: 23, 25]。
 * [cite_start]**運算層**: Kubernetes, System Software (Linux, Service Mesh) [cite: 24]。
 * [cite_start]**數據層**: AWS RDS, Azure SQL Database [cite: 28]。
-![Cloud Platform View](img/09_cloud_platform.png)
+![Cloud Platform View](img/09_Cloud_Platform.png)
