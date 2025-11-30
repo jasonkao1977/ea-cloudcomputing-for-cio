@@ -13,30 +13,30 @@
 
 ### Layer 1: 戰略與治理 (Strategy & Governance)
 定義「為什麼做」、「目標是什麼」以及「誰負責」。
-* [01. Strategy & Motivation (戰略與動機)](docs/01_strategy_motivation.md)
-* [02. Capability Map (能力地圖)](docs/VIEWS_CATALOG.md#02-capability-map)
-* [03. Governance & Ownership (治理與權責)](docs/VIEWS_CATALOG.md#03-governance--ownership-view)
-* [04. CCoE Operating Model (雲端卓越中心運作模型)](docs/VIEWS_CATALOG.md#04-ccoe-operating-model)
-* [05. FinOps (財務維運)](docs/VIEWS_CATALOG.md#05-finops-view)
-* [06. Security & Compliance (資安與合規)](docs/VIEWS_CATALOG.md#06-security--compliance-view)
+* [01. Strategy & Motivation (戰略與動機)](docs/01-strategy--motivation-view)
+* [02. Capability Map (能力地圖)](docs/02_capability_map.md)
+* [03. Governance & Ownership (治理與權責)](docs/03_governance_ownership.md)
+* [04. CCoE Operating Model (雲端卓越中心運作模型)](docs/04_ccoe_operating_model.md)
+* [05. FinOps (財務維運)](docs/05_finops)
+* [06. Security & Compliance (資安與合規)](docs/06_security_compliance.md)
 
 ### Layer 2: 規劃與服務 (Planning & Services)
 定義「如何執行」以及「提供什麼服務」。
-* [07. Implementation & Migration Roadmap (實施與遷移)](docs/VIEWS_CATALOG.md#07-implementation--migration-roadmap)
-* [08. Service Map (服務地圖)](docs/VIEWS_CATALOG.md#08-service-map)
+* [07. Implementation & Migration Roadmap (實施與遷移)](docs/07_implementation_roadmap.md)
+* [08. Service Map (服務地圖)](docs/08_service_map.md)
 
 ### Layer 3: 邏輯與技術架構 (Logical & Technical)
 展示系統的具體構造與技術堆疊。
-* [09. Cloud Platform (雲端平台架構)](docs/VIEWS_CATALOG.md#09-cloud-platform-view)
-* [10. Hybrid Cloud Network Topology (混合雲網路拓撲)](docs/VIEWS_CATALOG.md#10-hybrid-cloud-network-topology)
-* [11. AI Infrastructure Blueprint (AI 基礎設施藍圖)](docs/VIEWS_CATALOG.md#11-ai-infrastructure-blueprint)
-* [12. DevOps Platform (DevOps 平台)](docs/VIEWS_CATALOG.md#12-devops-platform-view)
+* [09. Cloud Platform (雲端平台架構)](docs/09_cloud_platform.md)
+* [10. Hybrid Cloud Network Topology (混合雲網路拓撲)](docs/10_hybrid_network_topology.md)
+* [11. AI Infrastructure Blueprint (AI 基礎設施藍圖)](docs/11_ai_infrastructure.md)
+* [12. DevOps Platform (DevOps 平台)](docs/12_devops_platform.md)
 
 ### Layer 4: 實作與維運 (Implementation & Operations)
 深入最底層的配置、環境隔離與數據落地。
-* [13. Deployment & Environment Topology (部署與環境拓撲)](docs/VIEWS_CATALOG.md#13-deployment--environment-topology)
-* [14. Run & Observability (維運與可觀測性)](docs/VIEWS_CATALOG.md#14-run--observability-view)
-* [15. Data Physicalization View (數據物理化)](docs/VIEWS_CATALOG.md#15-data-physicalization-view)
+* [13. Deployment & Environment Topology (部署與環境拓撲)](docs/13_deployment_topology.md)
+* [14. Run & Observability (維運與可觀測性)](docs/14_run_observability.md)
+* [15. Data Physicalization View (數據物理化)](docs/15_data_physicalization.md)
 
 ## 核心戰略指標 (Key Metrics)
 [cite_start]根據模型定義，本架構致力於驅動以下關鍵績效指標 [cite: 1, 2, 4, 5, 7]：
