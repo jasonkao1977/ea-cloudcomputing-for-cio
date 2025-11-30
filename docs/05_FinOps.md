@@ -10,4 +10,4 @@
     * [cite_start]雲供應商合約 (Commitments) [cite: 10]。
     * [cite_start]Savings Plans / RI 覆蓋率 (Optimization Artifacts) [cite: 11]。
 * [cite_start]**能力**: FinOps (KPI: 閒置資源 < 10%) [cite: 3]。
-![FinOps View](img/05_finops.png)
+![FinOps](img/05_finops.png)

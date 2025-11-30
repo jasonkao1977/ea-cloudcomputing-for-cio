@@ -15,4 +15,4 @@
 * [cite_start]**HSM**: 硬體安全模組，用於金鑰保護 [cite: 24]。
 * [cite_start]**IAM**: 身份識別與存取管理 [cite: 11]。
 * [cite_start]**身分即服務**: 外部身份認證服務 [cite: 11]。
-![Security & Compliance View](img/06_security_compliance.png)
+![Security & Compliance](img/06_security_compliance.png)
