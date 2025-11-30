@@ -4,7 +4,7 @@
 本儲存庫存放了針對財星 500 大企業 (Fortune 500) 等級設計的雲端運算企業架構模型 (Enterprise Architecture Model)。此架構由 Archi (ArchiMate 3.2) 工具繪製，旨在協助 CIO 實現雲端轉型，涵蓋戰略規劃、治理模型、FinOps、以及現代化技術堆疊 (GenAI, K8s)。
 
 ## Archi架構圖網站
-!Archi html Report(https://jasonkao1977.github.io/ea-cloudcomputing-for-cio)
+[Archi html Report](https://jasonkao1977.github.io/ea-cloudcomputing-for-cio)
 
 * **模型版本**: 5.0.0
 * **建模語言**: ArchiMate 3.2
