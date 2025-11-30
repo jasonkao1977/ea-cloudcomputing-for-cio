@@ -1,11 +1,21 @@
-# 策略與動機 (Strategy & Motivation)
+# 01. Strategy & Motivation View
 
-雲端採用的背後有明確的策略與動機。企業希望透過雲端提升敏捷度、加速產品上市並支援數位轉型。本章節說明主要的推動力：
+## 視圖概述
+此視圖作為架構的起點，向利益相關者展示「為什麼我們要上雲」。它連結了外部驅動力、內部戰略目標以及指導原則。
 
-- **商業敏捷度**：雲端服務讓企業能快速試驗並擴展新方案，應對不斷變化的市場需求。
-- **成本與投資效益**：採用按需付費模式降低前期資本支出，並透過自動化與最佳化減少長期運營成本。
-- **創新與競爭優勢**：雲端平台提供豐富的服務與技術生態系，支援 AI、分析與物聯網等創新功能。
+## 關鍵元素
+* [cite_start]**利害關係人 (Stakeholders)**: [cite: 32]
+    * CIO, CFO, CISO, 董事會, BU Head
+* [cite_start]**驅動力 (Drivers)**: [cite: 32]
+    * 成本優化, 上市速度, 彈性擴展, 資料主權與法遵
+* [cite_start]**戰略目標 (Goals)**: [cite: 32]
+    * 提升雲端採用率, 強化可用性與韌性, 縮短變更週期, 技術債清償
+* [cite_start]**指導原則 (Principles)**: [cite: 32]
+    * Cloud First, Security By Design, Composability, AI Ready
 
-![策略與動機示意圖](img/01_strategy_and_motivation.png)
+## 預期成果 (Outcomes)
+* [cite_start]成本降幅 [cite: 32]
+* [cite_start]MTTR 降低 [cite: 32]
+* [cite_start]部署頻率提升 [cite: 32]
 
-此視圖對應於模型中的「Strategy&Movitation」視圖，為後續章節奠定基礎。
+![Strategy & Motivation View](img/01_strategy_and_motivation.png)

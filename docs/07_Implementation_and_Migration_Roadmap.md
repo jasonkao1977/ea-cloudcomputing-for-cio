@@ -1,12 +1,18 @@
-# 實施與遷移路線圖 (Implementation & Migration Roadmap)
+# 07. Implementation & Migration Roadmap
 
-成功的雲端遷移需要明確的路線圖。本章節列出主要階段與里程碑，協助企業平穩完成轉型：
+## 視圖概述
+展示從現狀 (As-Is) 到目標 (To-Be) 的轉型時間軸。包含了具體的作業包、交付物以及過渡階段。
 
-1. **評估與規劃**：分析現有 IT 資產，評估業務需求與技術可行性，制定遷移策略與優先順序。
-2. **設計與準備**：定義目標架構、治理模式與安全策略，並準備基礎設施與團隊。
-3. **遷移與建置**：逐步搬遷工作負載至雲端，包括重構應用、資料遷移與平台配置。
-4. **優化與現代化**：遷移完成後持續優化資源，導入容器化、無伺服器或微服務架構，提高效率與創新能力。
+## 作業包 (Work Packages)
+* [cite_start]**平台建置**: 建立基礎設施 [cite: 32]。
+* [cite_start]**核心系統重構**: 針對關鍵應用進行 Refactor (重構) [cite: 33]。
+* [cite_start]**遷移梯次 W1 & W2**: 分批次應用上雲 [cite: 32]。
+* [cite_start]**AI Landing Zone 建置**: 準備 AI 環境 [cite: 35]。
+* [cite_start]**LLM 治理框架制定**: 建立 AI 使用規範 [cite: 35]。
 
-![實施與遷移路線圖示意圖](img/07_implementation_migration.png)
+## 關鍵交付物 (Deliverables)
+* [cite_start]上線清單 [cite: 33]。
+* [cite_start]運維 Runbook [cite: 34]。
+* [cite_start]控制要求符合性報告 [cite: 33]。
 
-此視圖對應於模型中的「Implementation&Migtation Roadmap」視圖，為轉型行動提供結構化指引。
+![Implementation & Migration Roadmap](img/07_implementation_roadmap.png)
