@@ -18,4 +18,4 @@
 * [cite_start]MTTR 降低 [cite: 32]
 * [cite_start]部署頻率提升 [cite: 32]
 
-![Strategy & Motivation View](img/01_Strategy_and_Motivation.png)
+![Strategy & Motivation View](img/01_strategy_and_motivation.png)
