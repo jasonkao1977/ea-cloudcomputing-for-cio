@@ -15,4 +15,4 @@
 * [cite_start]運維 Runbook [cite: 34]。
 * [cite_start]控制要求符合性報告 [cite: 33]。
 
-![Implementation&Migration Roadmap](img/07_implementation_roadmap.png)
+![Implementation&Migration Roadmap](img/07_Implementation_and_Migration_Roadmap.png)
