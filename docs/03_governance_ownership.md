@@ -13,4 +13,4 @@
 * 雲端供應商合約 (Contracts)
 * 預算池 (Resources)
 * 關鍵數據 (Data Objects: 客戶資料, 交易資料)
-![Governance & Ownership View](img/03_governance_and_ownership.png)
+![Governance & Ownership View](img/03_Governance_and_Ownership.png)
