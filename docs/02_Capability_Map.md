@@ -13,4 +13,4 @@
 | **資料平台** | 資料長 (CDO) | 1. 資料品質分數 > 90%<br>2. [cite_start]資料攝取延遲 < 15 分鐘 [cite: 5] |
 | **MLOps** | AI 團隊負責人 | [cite_start]模型訓練到上線 < 2 天 [cite: 6] |
 
-![Capability Map](img/02_Capability_Map.png)
+![Capability Map](img/02_capability_map.png)
